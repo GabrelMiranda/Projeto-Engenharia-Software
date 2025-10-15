@@ -10,6 +10,14 @@
 
 Este é um projeto feito na faculdade FATEC em ARARAS/SP, com um personagem chamado Givanildo, cujo o objetivo é criar um Software/site para organização de tarefas.
 
+##
+
+## Arquitetura Utilizada
+
+Arquitetura em Camadas
+
+##
+
 <h2>Integrantes do Projeto</h2>
 
 <ul>
@@ -17,5 +25,6 @@ Este é um projeto feito na faculdade FATEC em ARARAS/SP, com um personagem cham
   <li>Samuel Heitor Fernandes</li>
 </ul>
 
+##
 
   #### Visualização do projeto: `Projeto-Engenharia-Software/src/Projeto-To-Do-List`
