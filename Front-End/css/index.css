@@ -1,0 +1,35 @@
+body {
+    padding: 12%;
+}
+
+
+.quadro {
+    border-radius: 10%;
+    background-color: aquamarine;
+    color: black; 
+
+    padding: 1%;
+    width: 30%;
+    height: 39rem;
+
+    display: block;
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.quadro .mb-3 {
+    padding-left: 0px;
+}
+
+.quadro img {
+    height: 100px;
+    width: 100px;
+}
+
+.quadro .dados {
+    font-size: 30px;
+    padding-left: px;
+}
