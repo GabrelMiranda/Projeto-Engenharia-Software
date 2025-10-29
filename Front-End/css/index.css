@@ -1,5 +1,5 @@
 body {
-    padding: 12%;
+    padding: 8%;
 }
 
 
@@ -24,12 +24,34 @@ body {
     padding-left: 0px;
 }
 
-.quadro img {
-    height: 100px;
-    width: 100px;
+.perfil img {
+    height: 110px;
+    width: 110px;
 }
+
+
+.cadeado img {
+    height: 90px;
+    width: 90px;
+    padding-bottom: 10px;
+}
+
 
 .quadro .dados {
     font-size: 30px;
-    padding-left: px;
+    padding-left: 30px;
 }
+
+div button {
+    background-color: black;
+    color: aliceblue;
+    border-radius: 15%;
+    width: 200px;
+    height: 50px;
+
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+
+

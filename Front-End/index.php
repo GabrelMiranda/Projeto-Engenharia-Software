@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,22 +17,24 @@
 
         <form>
 
-            <div class="mb-3">
-            <img src="https://static.vecteezy.com/system/resources/previews/050/758/789/non_2x/user-icon-on-transparent-background-free-png.png" >
-                <input type="email" class="dados" placeholder="Usuário">
+            <div class="mb-3" >
+              <div class="perfil">
+                <img  src="https://static.vecteezy.com/system/resources/previews/050/758/789/non_2x/user-icon-on-transparent-background-free-png.png" >
+              </div>
+              <input type="email" class="dados" placeholder="Usuário">
             </div>  
             <div class="mb-3">
-            <img src="https://images.vexels.com/media/users/3/136535/isolated/preview/393a7d8e436bccc3aedfd43865b48890-icone-de-cadeado.png">  
+              <div class="cadeado">
+                <img src="https://images.vexels.com/media/users/3/136535/isolated/preview/393a7d8e436bccc3aedfd43865b48890-icone-de-cadeado.png">
+              </div>  
               <input type="password" class="dados" placeholder="Senha">
             </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit"> Login </button>
           </form>
 
-
+        <div class="cadastro">
+          Não possui uma conta? <a href="#">Cadastre-se</a>
+        </div>
     </div>
 
 
