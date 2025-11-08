@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Tarefas</title>
+    <link rel="stylesheet" href="/projeto-tarefas/Frontend/css/tarefas.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Minhas Tarefas</h1>
+        <button class="logout-btn">Sair</button>
+    </header>
+
+    <main class="main-content">
+        <div class="filter">
+            <label for="categoria">Filtrar por status:</label>
+            <select id="categoria">
+                <option>Pendente</option>
+                <option>Em Andamento</option>
+                <option>Concluída</option>
+            </select>
+        </div>
+
+        <ul class="task-list">
+            <li class="task-item">
+                <div class="task-info">
+                    <h3>Finalizar relatório</h3>
+                    <p>Categoria: Trabalho</p>
+                </div>
+                <div class="task-actions">
+                    <button class="btn-small concluir">✔</button>
+                    <button class="btn-small editar">✎</button>
+                    <button class="btn-small excluir">🗑</button>
+                </div>
+            </li>
+
+            <li class="task-item concluida">
+                <div class="task-info">
+                    <h3>Comprar materiais</h3>
+                    <p>Categoria: Pessoal</p>
+                </div>
+                <div class="task-actions">
+                    <button class="btn-small concluir">✔</button>
+                    <button class="btn-small editar">✎</button>
+                    <button class="btn-small excluir">🗑</button>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <button class="add-btn" onclick="window.location.href='editar.html'">+</button>
+</body>
+
+</html>
