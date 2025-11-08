@@ -15,7 +15,7 @@ if ($user && password_verify($senha, $user['senha'])) {
     header("Location: ../Frontend/pages/tarefas.html");
     exit;
 } else {
-    header("Location: ../Frontend/pages/login.html?erro=1");
+    header("Location: ../Frontend/pages/index.html?erro=1");
     exit;
 }
 ?>
