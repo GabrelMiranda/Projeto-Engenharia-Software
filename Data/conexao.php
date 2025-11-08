@@ -1,22 +1,13 @@
 <?php
-$hostname = "localhost";
-$username = "";
-$password = "";
-$dbname = "banco";
+$host = "localhost";
+$db = "projeto_tarefas";
+$user = "root";
+$pass = "";
 
-// Conecta-se ao banco de dados
-$con = mysqli_connect($hostname, $username, $password, $dbname);
-
-// Verifica se a conexão foi bem-sucedida
-if (!$con) {
-    die("Erro na conexão: " . mysqli_connect_error());
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro na conexão: " . $e->getMessage());
 }
-
-// Para selecionar o banco de dados (se não foi passado no construtor)
-// mysqli_select_db($con, $dbname);
-
-echo "Conectado com sucesso!";
-
-// Para fechar a conexão
-// mysqli_close($con);
 ?>
