@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+}
+
+/*CABEÇALHO*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #6c63ff;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.voltar-btn {
+    background-color: #fff;
+    color: #6c63ff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.voltar-btn:hover {
+    background-color: #f3f3f3;
+}
+
+/*FORM*/
+.main-content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.task-form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.task-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95em;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus {
+    border-color: #6c63ff;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.salvar {
+    background-color: #6c63ff;
+    color: #fff;
+}
+
+.salvar:hover {
+    background-color: #5b54d8;
+}
+
+.cancelar {
+    background-color: #ccc;
+    color: #333;
+}
+
+.cancelar:hover {
+    background-color: #b5b5b5;
+}
+
+
+@media (max-width: 500px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
