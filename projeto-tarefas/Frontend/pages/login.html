@@ -1,69 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Sistema de Tarefas</title>
-    <link rel="stylesheet" href="/projeto-tarefas/Frontend/css/login.css">
+    <title>Login | Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
     <div class="container">
         <div class="login-card">
-            <h1>Gestão de Tarefas</h1>
-            <p class="subtitle">Acesse sua conta</p>
+            <h1>Bem-vindo ao Sistema</h1>
+            <p class="subtitle">Acesse ou crie sua conta</p>
 
-            <form id="login-form">
+            <!-- Formulário de Login -->
+            <form action="../../backend/login.php" method="POST">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="Digite sua senha" required>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
 
                 <button type="submit" class="btn">Entrar</button>
-
-                <p class="register-text">
-                    Ainda não tem conta?
-                    <a href="#" id="show-register">Cadastre-se</a>
-                </p>
             </form>
 
-            <form id="register-form" class="hidden">
-                <label for="novo-email">E-mail</label>
-                <input type="email" id="novo-email" placeholder="Digite seu e-mail" required>
+            <p class="register-text">Ainda não tem conta?
+                <a href="#" onclick="toggleForms()">Cadastre-se</a>
+            </p>
 
-                <label for="nova-senha">Senha</label>
-                <input type="password" id="nova-senha" placeholder="Crie uma senha" required>
+            <!-- Formulário de Cadastro -->
+            <form action="../../backend/cadastro.php" method="POST" id="cadastroForm" class="hidden">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                <label for="emailCadastro">E-mail</label>
+                <input type="email" id="emailCadastro" name="email" placeholder="Digite seu e-mail" required>
+
+                <label for="senhaCadastro">Senha</label>
+                <input type="password" id="senhaCadastro" name="senha" placeholder="Crie uma senha" required>
 
                 <button type="submit" class="btn">Cadastrar</button>
 
-                <p class="register-text">
-                    Já tem conta?
-                    <a href="#" id="show-login">Faça login</a>
+                <p class="register-text">Já tem conta?
+                    <a href="#" onclick="toggleForms()">Entrar</a>
                 </p>
             </form>
+
+            <!-- Mensagens -->
+            <div style="margin-top:10px;">
+                <script>
+                    const urlParams = new URLSearchParams(window.location.search);
+                    if (urlParams.has('erro')) {
+                        document.write("<p style='color:red'>Erro: E-mail inválido ou já cadastrado.</p>");
+                    } else if (urlParams.has('sucesso')) {
+                        document.write("<p style='color:green'>Conta criada com sucesso! Faça login.</p>");
+                    }
+                </script>
+            </div>
         </div>
     </div>
 
     <script>
-        // Alternar entre login e cadastro
-        const loginForm = document.getElementById('login-form');
-        const registerForm = document.getElementById('register-form');
-        const showRegister = document.getElementById('show-register');
-        const showLogin = document.getElementById('show-login');
-
-        showRegister.addEventListener('click', (e) => {
-            e.preventDefault();
-            loginForm.classList.add('hidden');
-            registerForm.classList.remove('hidden');
-        });
-
-        showLogin.addEventListener('click', (e) => {
-            e.preventDefault();
-            registerForm.classList.add('hidden');
-            loginForm.classList.remove('hidden');
-        });
+        function toggleForms() {
+            document.querySelector('form[action*="login.php"]').classList.toggle('hidden');
+            document.querySelector('#cadastroForm').classList.toggle('hidden');
+        }
     </script>
 </body>
 
