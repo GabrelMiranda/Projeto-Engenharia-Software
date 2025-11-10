@@ -9,6 +9,7 @@ CREATE TABLE `tarefas` (
   `id` int(11) NOT NULL,
   `usuario_id` int(11) NOT NULL,
   `titulo` varchar(250) NOT NULL,
+  `categoria` varchar(250) NOT NULL,
   `descricao` text DEFAULT NULL,
   `status` enum('pendente','em andamento','concluida') DEFAULT 'pendente',
   `data_criacao` datetime DEFAULT current_timestamp(),
