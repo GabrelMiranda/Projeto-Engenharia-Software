@@ -11,7 +11,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($user && password_verify($senha, $user['senha'])) {
     $_SESSION['id'] = $user['id'];
-    header("Location: ../Frontend/pages/tarefas.html");
+    header("Location: ../Frontend/pages/tarefas.php");
     exit;
 } else {
     header("Location: ../Frontend/pages/index.html?erro=1");
