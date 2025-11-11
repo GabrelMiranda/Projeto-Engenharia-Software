@@ -57,7 +57,6 @@ try {
                 <select name="filtro" id="filtro" onchange="this.form.submit()">
                     <option value="todas" <?= $filtro === 'todas' ? 'selected' : '' ?>>Todas</option>
                     <option value="pendente" <?= $filtro === 'pendente' ? 'selected' : '' ?>>Pendente</option>
-                    <option value="em andamento" <?= $filtro === 'em andamento' ? 'selected' : '' ?>>Em andamento</option>
                     <option value="concluida" <?= $filtro === 'concluida' ? 'selected' : '' ?>>Concluída</option>
                 </select>
             </form>
